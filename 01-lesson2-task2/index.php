@@ -1,8 +1,22 @@
+#!/usr/bin/php
 <?php
 
 namespace otus\lesson02;
 
-use otus\lesson02\CheckBrackets as CheckBrackets;
+include_once '..\01-lesson2-task1\CheckBrackets.php';
 
 $checkBrackets = new CheckBrackets();
-echo var_dump($checkBrackets->verify('(())'));
+
+
+$path = readline('Введите адрес до файла со строкой: ');
+// Считать строку
+$text = file_get_contents($path) or die("Невозможно открыть файл: $php_errormsg");
+// Передать строку библиотеке
+echo 'Считанный текст -> '.$text.PHP_EOL;
+// Вернуть результат в терминал
+if ($checkBrackets->verify($text)) {
+    echo 'Скобки расставлены правильно!';
+} else {
+    echo 'Скобки расставлены неправильно!';
+}
+
