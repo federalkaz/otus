@@ -1,0 +1,17 @@
+{
+  "name": "federalkaz/bracketedchecker",
+  "description": "hometask from OTUS",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dmitriy Svechnikov",
+      "email": "svechnikov-d@mail.ru"
+    }
+  ],
+  "require": {
+    "php" : ">=7.1"
+  },
+  "autoload": {
+    "classmap": ["src"]
+  }
+}
