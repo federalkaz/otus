@@ -1,8 +1,5 @@
 <?php
 
-namespace otus\lesson02;
-
-
 class CheckBrackets
 {
     //Определяем список разрешённых символов входящих в строку
